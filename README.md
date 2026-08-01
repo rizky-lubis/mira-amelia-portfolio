@@ -2,11 +2,13 @@
 
 # Mira Amelia — Portfolio & Blog
 
-Portofolio soft aesthetic & blog interaktif milik **Mira Amelia Prayitno**, Software Engineer.
+Portofolio minimal & blog interaktif milik **Mira Amelia Prayitno**, Software Engineer.
 
 </div>
 
-Dibangun dengan **React 19 + Vite + Tailwind CSS v4**, menampilkan hero section, tentang, proyek, galeri, skills & sertifikasi, blog, kontak, CV modal, dan admin panel.
+🔗 **Live:** https://mira-amelia-portfolio.vercel.app
+
+Dibangun dengan **React 19 + Vite + Tailwind CSS v4**, menampilkan hero section, tentang, proyek, galeri, skills & sertifikasi, blog, kontak, CV modal, dan admin panel — dengan tema minimal netral serta background animasi (orb, partikel, simbol melayang).
 
 ## Tech Stack
 
@@ -63,3 +65,9 @@ vercel
 Ikuti prompt, framework akan terdeteksi otomatis (`Vite`), lalu `vercel --prod` untuk production.
 
 > Aplikasi ini murni static (tanpa backend). Verifikasi password terjadi di sisi browser, sehingga password tetap bisa ditemukan lewat DevTools — env var ini menyembunyikannya dari kode & repo, bukan keamanan penuh.
+
+## Deployment Saat Ini
+
+- **Domain production:** https://mira-amelia-portfolio.vercel.app
+- **Project:** `mira-amelia-portfolio` (workspace `rizky-lubis-projects`)
+- **Deploy manual via CLI:** `vercel --prod --yes --name mira-amelia-portfolio` (nama project wajib eksplisit karena folder lokal mengandung karakter `&`/`---`)
