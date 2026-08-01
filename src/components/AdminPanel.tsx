@@ -38,6 +38,8 @@ interface AdminPanelProps {
   onClose: () => void;
 }
 
+const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD || 'Mira@Portfolio#2026';
+
 export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(() => {
     return sessionStorage.getItem('mira_admin_authenticated') === 'true';
@@ -94,14 +96,13 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    // Default secret PIN / password
-    if (passwordInput.trim() === 'mira2026' || passwordInput.trim() === 'admin123' || passwordInput.trim() === 'admin') {
+    if (passwordInput.trim() === ADMIN_PASSWORD) {
       setIsAuthenticated(true);
       sessionStorage.setItem('mira_admin_authenticated', 'true');
       setAuthError('');
       showToast('Selamat datang, Admin Mira Amelia!');
     } else {
-      setAuthError('Kata sandi admin salah! (Gunakan kata sandi: mira2026)');
+      setAuthError('Kata sandi admin salah!');
     }
   };
 
@@ -254,15 +255,12 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
               </label>
               <input
                 type="password"
-                placeholder="Masukkan kata sandi admin (mira2026)"
+                placeholder="Masukkan kata sandi admin"
                 value={passwordInput}
                 onChange={(e) => setPasswordInput(e.target.value)}
                 className="w-full px-4 py-3 rounded-2xl bg-[#FAFAFA] border border-[#E9E9ED] focus:border-[#8B8B95] focus:bg-white text-xs outline-none transition-all font-mono"
                 autoFocus
               />
-              <p className="text-[11px] text-[#8B8B95] mt-1 italic">
-                * Default PIN sandi: <code className="font-bold text-[#4A4E69]">mira2026</code>
-              </p>
             </div>
 
             {authError && (

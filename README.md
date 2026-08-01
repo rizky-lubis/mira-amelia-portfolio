@@ -38,6 +38,12 @@ Buka `http://localhost:3000`.
 
 > Catatan: di Windows, jalankan type-check/build lewat `node node_modules/typescript/bin/tsc --noEmit` dan `node node_modules/vite/bin/vite.js build` jika folder project mengandung karakter `&`.
 
+## Admin Panel & Kata Sandi
+
+- Akses portal admin: tambahkan `/#admin` atau `?admin=true` di akhir URL.
+- Kata sandi diambil dari env `VITE_ADMIN_PASSWORD` (baca `.env.example`). Tanpa env tersebut, dipakai fallback bawaan di `src/components/AdminPanel.tsx`.
+- **Jangan commit password asli** — `.env*` sudah di-ignore git.
+
 ## Deploy ke Vercel
 
 ### Via Git (disarankan)
@@ -45,6 +51,7 @@ Buka `http://localhost:3000`.
 1. Buat repo GitHub (hindari karakter `&` pada nama repo), lalu push project ini.
 2. Import repo di [Vercel Dashboard](https://vercel.com/new).
 3. Vercel auto-detect: framework **Vite**, build command `npm run build`, output directory `dist`. Tidak perlu konfigurasi tambahan.
+4. **Wajib:** set env `VITE_ADMIN_PASSWORD` di Vercel Dashboard (Settings → Environment Variables) dengan password yang kamu mau — jika tidak di-set, fallback bawaan akan dipakai.
 
 ### Via Vercel CLI
 
@@ -55,4 +62,4 @@ vercel
 
 Ikuti prompt, framework akan terdeteksi otomatis (`Vite`), lalu `vercel --prod` untuk production.
 
-Tidak ada environment variable yang dibutuhkan — aplikasi ini murni static (tanpa backend/server side code).
+> Aplikasi ini murni static (tanpa backend). Verifikasi password terjadi di sisi browser, sehingga password tetap bisa ditemukan lewat DevTools — env var ini menyembunyikannya dari kode & repo, bukan keamanan penuh.
