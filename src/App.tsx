@@ -10,6 +10,7 @@ import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { CVModal } from './components/CVModal';
 import { AdminPanel } from './components/AdminPanel';
+import { BackgroundFX } from './components/BackgroundFX';
 
 export default function App() {
   const [activeSection, setActiveSection] = useState<string>('hero');
@@ -61,8 +62,11 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FCF8F4] text-[#4A4E69] font-sans selection:bg-[#FDE2E4] selection:text-[#4A4E69] relative">
+    <div className="min-h-screen bg-[#FAFAFA] text-[#4A4E69] font-sans selection:bg-[#EFEFF2] selection:text-[#4A4E69] relative">
       
+      {/* Animated Minimal Background */}
+      <BackgroundFX />
+
       {/* Soft Top Navigation */}
       <Navbar
         activeSection={activeSection}

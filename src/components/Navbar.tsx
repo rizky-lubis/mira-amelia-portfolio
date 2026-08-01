@@ -34,31 +34,31 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onOpenCVModal }) 
       <div
         className={`max-w-6xl mx-auto rounded-3xl transition-all duration-300 ${
           isScrolled
-            ? 'bg-white/90 backdrop-blur-md shadow-sm py-3 px-5 border border-[#E2ECE9]'
-            : 'bg-white/60 backdrop-blur-md py-4 px-6 border border-[#E2ECE9]/80'
+            ? 'bg-white/90 backdrop-blur-md shadow-sm py-3 px-5 border border-[#E9E9ED]'
+            : 'bg-white/60 backdrop-blur-md py-4 px-6 border border-[#E9E9ED]/80'
         }`}
       >
         <div className="flex items-center justify-between">
           {/* Logo Brand */}
           <a
             href="#hero"
-            className="group flex items-center gap-2.5 font-display text-lg font-bold text-[#4A4E69] hover:text-[#9A8C98] transition-colors"
+            className="group flex items-center gap-2.5 font-display text-lg font-bold text-[#4A4E69] hover:text-[#8B8B95] transition-colors"
           >
-            <div className="w-9 h-9 rounded-2xl bg-gradient-to-tr from-[#FDE2E4] via-[#C9E4DE] to-[#DBCDF0] flex items-center justify-center text-[#4A4E69] shadow-inner border border-white group-hover:scale-105 transition-transform">
-              <Sparkles className="w-4 h-4 text-[#9A8C98]" />
+            <div className="w-9 h-9 rounded-2xl bg-gradient-to-tr from-[#EFEFF2] via-[#D4D4DB] to-[#EFEFF2] flex items-center justify-center text-[#4A4E69] shadow-inner border border-white group-hover:scale-105 transition-transform">
+              <Sparkles className="w-4 h-4 text-[#8B8B95]" />
             </div>
             <div className="flex flex-col">
               <span className="leading-tight tracking-tight text-[#4A4E69] font-semibold text-base font-serif italic">
                 Mira Amelia.
               </span>
-              <span className="text-[10px] text-[#9A8C98] font-mono tracking-widest uppercase font-medium">
+              <span className="text-[10px] text-[#8B8B95] font-mono tracking-widest uppercase font-medium">
                 Software Engineer
               </span>
             </div>
           </a>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center gap-1 bg-[#E2ECE9]/50 p-1.5 rounded-full border border-[#E2ECE9]">
+          <nav className="hidden md:flex items-center gap-1 bg-[#E9E9ED]/50 p-1.5 rounded-full border border-[#E9E9ED]">
             {navLinks.map((link) => {
               const isActive = activeSection === link.href.substring(1);
               return (
@@ -67,8 +67,8 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onOpenCVModal }) 
                   href={link.href}
                   className={`px-3.5 py-1.5 rounded-full text-xs font-medium tracking-wide transition-all ${
                     isActive
-                      ? 'bg-white text-[#4A4E69] shadow-xs font-bold border border-[#C9E4DE]'
-                      : 'text-[#9A8C98] hover:text-[#4A4E69] hover:bg-white/60'
+                      ? 'bg-white text-[#4A4E69] shadow-xs font-bold border border-[#D4D4DB]'
+                      : 'text-[#8B8B95] hover:text-[#4A4E69] hover:bg-white/60'
                   }`}
                 >
                   {link.name}
@@ -81,14 +81,14 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onOpenCVModal }) 
           <div className="hidden sm:flex items-center gap-2.5">
             <button
               onClick={onOpenCVModal}
-              className="inline-flex items-center gap-1.5 px-4 py-1.5 text-xs font-medium text-[#4A4E69] bg-white hover:bg-[#FCF8F4] border border-[#E2ECE9] rounded-full shadow-xs hover:border-[#C9E4DE] transition-all cursor-pointer"
+              className="inline-flex items-center gap-1.5 px-4 py-1.5 text-xs font-medium text-[#4A4E69] bg-white hover:bg-[#FAFAFA] border border-[#E9E9ED] rounded-full shadow-xs hover:border-[#D4D4DB] transition-all cursor-pointer"
             >
-              <FileText className="w-3.5 h-3.5 text-[#9A8C98]" />
+              <FileText className="w-3.5 h-3.5 text-[#8B8B95]" />
               <span>CV</span>
             </button>
             <a
               href="#contact"
-              className="inline-flex items-center gap-1.5 px-4 py-1.5 text-xs font-bold text-white bg-[#9A8C98] hover:bg-[#4A4E69] rounded-full uppercase tracking-widest transition-all shadow-xs"
+              className="inline-flex items-center gap-1.5 px-4 py-1.5 text-xs font-bold text-white bg-[#8B8B95] hover:bg-[#4A4E69] rounded-full uppercase tracking-widest transition-all shadow-xs"
             >
               <Send className="w-3 h-3" />
               <span>Hubungi</span>
@@ -98,7 +98,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onOpenCVModal }) 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-[#4A4E69] hover:text-[#9A8C98] rounded-2xl bg-white border border-[#E2ECE9]"
+            className="md:hidden p-2 text-[#4A4E69] hover:text-[#8B8B95] rounded-2xl bg-white border border-[#E9E9ED]"
             aria-label="Toggle Navigation Menu"
           >
             {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -108,33 +108,33 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onOpenCVModal }) 
 
       {/* Mobile Drawer */}
       {isMobileMenuOpen && (
-        <div className="md:hidden mt-2 p-4 bg-white/95 backdrop-blur-md rounded-3xl border border-[#E2ECE9] shadow-md animate-in fade-in slide-in-from-top-2 duration-200">
+        <div className="md:hidden mt-2 p-4 bg-white/95 backdrop-blur-md rounded-3xl border border-[#E9E9ED] shadow-md animate-in fade-in slide-in-from-top-2 duration-200">
           <div className="flex flex-col gap-2">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="px-4 py-2.5 text-sm font-medium text-[#4A4E69] hover:text-[#9A8C98] hover:bg-[#FCF8F4] rounded-2xl transition-colors"
+                className="px-4 py-2.5 text-sm font-medium text-[#4A4E69] hover:text-[#8B8B95] hover:bg-[#FAFAFA] rounded-2xl transition-colors"
               >
                 {link.name}
               </a>
             ))}
-            <div className="pt-2 border-t border-[#E2ECE9] flex flex-col gap-2 mt-1">
+            <div className="pt-2 border-t border-[#E9E9ED] flex flex-col gap-2 mt-1">
               <button
                 onClick={() => {
                   setIsMobileMenuOpen(false);
                   onOpenCVModal();
                 }}
-                className="flex items-center justify-center gap-2 px-4 py-2 text-xs font-medium text-[#4A4E69] bg-[#E2ECE9] hover:bg-[#C9E4DE] rounded-2xl transition-colors"
+                className="flex items-center justify-center gap-2 px-4 py-2 text-xs font-medium text-[#4A4E69] bg-[#E9E9ED] hover:bg-[#D4D4DB] rounded-2xl transition-colors"
               >
-                <FileText className="w-4 h-4 text-[#9A8C98]" />
+                <FileText className="w-4 h-4 text-[#8B8B95]" />
                 <span>Lihat / Print CV Complete</span>
               </button>
               <a
                 href="#contact"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="flex items-center justify-center gap-2 px-4 py-2 text-xs font-bold text-white bg-[#9A8C98] hover:bg-[#4A4E69] rounded-2xl uppercase tracking-widest shadow-xs"
+                className="flex items-center justify-center gap-2 px-4 py-2 text-xs font-bold text-white bg-[#8B8B95] hover:bg-[#4A4E69] rounded-2xl uppercase tracking-widest shadow-xs"
               >
                 <Send className="w-3.5 h-3.5" />
                 <span>Hubungi Saya</span>

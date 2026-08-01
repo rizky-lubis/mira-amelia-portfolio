@@ -228,21 +228,21 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="bg-white rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl border border-[#E2ECE9] relative text-[#4A4E69]"
+          className="bg-white rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl border border-[#E9E9ED] relative text-[#4A4E69]"
         >
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 p-2 rounded-full bg-[#FCF8F4] hover:bg-[#FDE2E4] text-[#4A4E69] transition-colors cursor-pointer"
+            className="absolute top-4 right-4 p-2 rounded-full bg-[#FAFAFA] hover:bg-[#EFEFF2] text-[#4A4E69] transition-colors cursor-pointer"
           >
             <X className="w-5 h-5" />
           </button>
 
           <div className="text-center mb-6">
-            <div className="w-14 h-14 rounded-2xl bg-[#E2ECE9] text-[#4A4E69] flex items-center justify-center mx-auto mb-3 shadow-xs">
-              <Lock className="w-7 h-7 text-[#9A8C98]" />
+            <div className="w-14 h-14 rounded-2xl bg-[#E9E9ED] text-[#4A4E69] flex items-center justify-center mx-auto mb-3 shadow-xs">
+              <Lock className="w-7 h-7 text-[#8B8B95]" />
             </div>
             <h2 className="text-2xl font-bold font-serif italic text-[#4A4E69]">Portal Akses Admin</h2>
-            <p className="text-xs text-[#9A8C98] mt-1 font-light">
+            <p className="text-xs text-[#8B8B95] mt-1 font-light">
               Khusus pengelolaan foto proyek & artefak portofolio Mira Amelia.
             </p>
           </div>
@@ -257,10 +257,10 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
                 placeholder="Masukkan kata sandi admin (mira2026)"
                 value={passwordInput}
                 onChange={(e) => setPasswordInput(e.target.value)}
-                className="w-full px-4 py-3 rounded-2xl bg-[#FCF8F4] border border-[#E2ECE9] focus:border-[#9A8C98] focus:bg-white text-xs outline-none transition-all font-mono"
+                className="w-full px-4 py-3 rounded-2xl bg-[#FAFAFA] border border-[#E9E9ED] focus:border-[#8B8B95] focus:bg-white text-xs outline-none transition-all font-mono"
                 autoFocus
               />
-              <p className="text-[11px] text-[#9A8C98] mt-1 italic">
+              <p className="text-[11px] text-[#8B8B95] mt-1 italic">
                 * Default PIN sandi: <code className="font-bold text-[#4A4E69]">mira2026</code>
               </p>
             </div>
@@ -273,17 +273,17 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
 
             <button
               type="submit"
-              className="w-full py-3 px-4 rounded-2xl bg-[#9A8C98] hover:bg-[#4A4E69] text-white text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-all cursor-pointer shadow-xs"
+              className="w-full py-3 px-4 rounded-2xl bg-[#8B8B95] hover:bg-[#4A4E69] text-white text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-all cursor-pointer shadow-xs"
             >
               <Unlock className="w-4 h-4" />
               <span>Masuk Portal Admin</span>
             </button>
           </form>
 
-          <div className="mt-6 pt-4 border-t border-[#E2ECE9] text-center">
+          <div className="mt-6 pt-4 border-t border-[#E9E9ED] text-center">
             <button
               onClick={onClose}
-              className="text-xs text-[#9A8C98] hover:text-[#4A4E69] font-medium transition-colors flex items-center justify-center gap-1 mx-auto"
+              className="text-xs text-[#8B8B95] hover:text-[#4A4E69] font-medium transition-colors flex items-center justify-center gap-1 mx-auto"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
               <span>Kembali ke Portofolio Publik</span>
@@ -295,7 +295,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
   }
 
   return (
-    <div className="fixed inset-0 z-50 bg-[#FCF8F4] text-[#4A4E69] overflow-y-auto font-sans">
+    <div className="fixed inset-0 z-50 bg-[#FAFAFA] text-[#4A4E69] overflow-y-auto font-sans">
       {/* Toast Notification */}
       <AnimatePresence>
         {notification && (
@@ -306,7 +306,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
             className={`fixed top-4 right-4 z-50 px-5 py-3 rounded-2xl text-xs font-bold uppercase tracking-wider shadow-lg flex items-center gap-2 border ${
               notification.type === 'error'
                 ? 'bg-rose-600 text-white border-rose-700'
-                : 'bg-[#4A4E69] text-[#C9E4DE] border-[#9A8C98]'
+                : 'bg-[#4A4E69] text-[#D4D4DB] border-[#8B8B95]'
             }`}
           >
             <CheckCircle2 className="w-4 h-4 shrink-0" />
@@ -316,20 +316,20 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
       </AnimatePresence>
 
       {/* Top Admin Header Bar */}
-      <header className="bg-[#4A4E69] text-white py-4 px-6 sticky top-0 z-40 border-b border-[#9A8C98]/30 shadow-md">
+      <header className="bg-[#4A4E69] text-white py-4 px-6 sticky top-0 z-40 border-b border-[#8B8B95]/30 shadow-md">
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-full bg-[#C9E4DE] flex items-center justify-center text-[#4A4E69] font-bold">
+            <div className="w-9 h-9 rounded-full bg-[#D4D4DB] flex items-center justify-center text-[#4A4E69] font-bold">
               <ShieldCheck className="w-5 h-5" />
             </div>
             <div>
               <div className="flex items-center gap-2">
                 <h1 className="text-base font-bold font-serif italic">Dashboard Admin Upload Proyek</h1>
-                <span className="px-2 py-0.5 rounded-full bg-[#C9E4DE] text-[#4A4E69] text-[10px] font-bold uppercase">
+                <span className="px-2 py-0.5 rounded-full bg-[#D4D4DB] text-[#4A4E69] text-[10px] font-bold uppercase">
                   Akses Luar / Khusus
                 </span>
               </div>
-              <p className="text-[11px] text-[#E2ECE9] font-light">
+              <p className="text-[11px] text-[#E9E9ED] font-light">
                 Kelola & upload foto karya tanpa menampilkan tombol admin di navigasi publik
               </p>
             </div>
@@ -347,7 +347,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
 
             <button
               onClick={onClose}
-              className="px-4 py-1.5 rounded-2xl bg-[#C9E4DE] hover:bg-white text-[#4A4E69] text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 transition-colors cursor-pointer shadow-xs"
+              className="px-4 py-1.5 rounded-2xl bg-[#D4D4DB] hover:bg-white text-[#4A4E69] text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 transition-colors cursor-pointer shadow-xs"
             >
               <Eye className="w-3.5 h-3.5" />
               <span>Lihat Portofolio</span>
@@ -368,26 +368,26 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
         
         {/* Info Banner on how to access */}
-        <div className="mb-8 p-4 rounded-3xl bg-white border-l-4 border-[#C9E4DE] border-y border-r border-[#E2ECE9] shadow-xs flex items-start gap-3">
-          <Info className="w-5 h-5 text-[#9A8C98] shrink-0 mt-0.5" />
+        <div className="mb-8 p-4 rounded-3xl bg-white border-l-4 border-[#D4D4DB] border-y border-r border-[#E9E9ED] shadow-xs flex items-start gap-3">
+          <Info className="w-5 h-5 text-[#8B8B95] shrink-0 mt-0.5" />
           <div className="text-xs text-[#4A4E69]">
             <span className="font-bold text-[#4A4E69] uppercase tracking-wider block mb-0.5">
               💡 Panduan Akses Portal Admin dari Luar:
             </span>
             <p className="font-light leading-relaxed">
-              Sesuai permintaan Anda, portal admin ini <strong>tidak ditampilkan di menu navigasi utama publik</strong>. Untuk mengaksesnya dari browser kapan pun, cukup tambahkan tag <code className="bg-[#FCF8F4] px-1.5 py-0.5 rounded border border-[#E2ECE9] font-mono font-bold text-[#4A4E69]">/#admin</code> atau parameter <code className="bg-[#FCF8F4] px-1.5 py-0.5 rounded border border-[#E2ECE9] font-mono font-bold text-[#4A4E69]">?admin=true</code> di akhir URL browser Anda.
+              Sesuai permintaan Anda, portal admin ini <strong>tidak ditampilkan di menu navigasi utama publik</strong>. Untuk mengaksesnya dari browser kapan pun, cukup tambahkan tag <code className="bg-[#FAFAFA] px-1.5 py-0.5 rounded border border-[#E9E9ED] font-mono font-bold text-[#4A4E69]">/#admin</code> atau parameter <code className="bg-[#FAFAFA] px-1.5 py-0.5 rounded border border-[#E9E9ED] font-mono font-bold text-[#4A4E69]">?admin=true</code> di akhir URL browser Anda.
             </p>
           </div>
         </div>
 
         {/* Admin Navigation Tabs */}
-        <div className="flex items-center gap-2 border-b border-[#E2ECE9] pb-4 mb-8 overflow-x-auto">
+        <div className="flex items-center gap-2 border-b border-[#E9E9ED] pb-4 mb-8 overflow-x-auto">
           <button
             onClick={() => { setActiveTab('upload_photos'); setIsAddingNewProject(false); }}
             className={`px-5 py-2.5 rounded-2xl text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-2 cursor-pointer ${
               activeTab === 'upload_photos' && !isAddingNewProject
-                ? 'bg-[#9A8C98] text-white shadow-xs'
-                : 'bg-white text-[#4A4E69] hover:bg-[#E2ECE9] border border-[#E2ECE9]'
+                ? 'bg-[#8B8B95] text-white shadow-xs'
+                : 'bg-white text-[#4A4E69] hover:bg-[#E9E9ED] border border-[#E9E9ED]'
             }`}
           >
             <Upload className="w-4 h-4" />
@@ -398,8 +398,8 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
             onClick={() => { setActiveTab('manage_projects'); setIsAddingNewProject(false); }}
             className={`px-5 py-2.5 rounded-2xl text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-2 cursor-pointer ${
               activeTab === 'manage_projects' && !isAddingNewProject
-                ? 'bg-[#9A8C98] text-white shadow-xs'
-                : 'bg-white text-[#4A4E69] hover:bg-[#E2ECE9] border border-[#E2ECE9]'
+                ? 'bg-[#8B8B95] text-white shadow-xs'
+                : 'bg-white text-[#4A4E69] hover:bg-[#E9E9ED] border border-[#E9E9ED]'
             }`}
           >
             <FolderPlus className="w-4 h-4" />
@@ -410,8 +410,8 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
             onClick={() => { setActiveTab('gallery'); setIsAddingNewProject(false); }}
             className={`px-5 py-2.5 rounded-2xl text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-2 cursor-pointer ${
               activeTab === 'gallery' && !isAddingNewProject
-                ? 'bg-[#9A8C98] text-white shadow-xs'
-                : 'bg-white text-[#4A4E69] hover:bg-[#E2ECE9] border border-[#E2ECE9]'
+                ? 'bg-[#8B8B95] text-white shadow-xs'
+                : 'bg-white text-[#4A4E69] hover:bg-[#E9E9ED] border border-[#E9E9ED]'
             }`}
           >
             <ImageIcon className="w-4 h-4" />
@@ -424,10 +424,10 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
             
             {/* Left Column: Project Selector List */}
-            <div className="lg:col-span-5 bg-white p-6 rounded-3xl border border-[#E2ECE9] shadow-sm space-y-4">
-              <div className="flex items-center justify-between pb-3 border-b border-[#E2ECE9]">
+            <div className="lg:col-span-5 bg-white p-6 rounded-3xl border border-[#E9E9ED] shadow-sm space-y-4">
+              <div className="flex items-center justify-between pb-3 border-b border-[#E9E9ED]">
                 <h2 className="text-base font-bold font-serif italic text-[#4A4E69]">Pilih Proyek ({projects.length})</h2>
-                <span className="text-[10px] font-bold text-[#9A8C98] uppercase tracking-wider">Pilih untuk ganti foto</span>
+                <span className="text-[10px] font-bold text-[#8B8B95] uppercase tracking-wider">Pilih untuk ganti foto</span>
               </div>
 
               <div className="space-y-2 max-h-[500px] overflow-y-auto pr-1">
@@ -443,28 +443,28 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
                       }}
                       className={`p-3.5 rounded-2xl border transition-all cursor-pointer flex items-center gap-3 ${
                         isSelected
-                          ? 'border-[#9A8C98] bg-[#FCF8F4] shadow-xs'
-                          : 'border-[#E2ECE9] bg-white hover:border-[#C9E4DE] hover:bg-[#FCF8F4]/50'
+                          ? 'border-[#8B8B95] bg-[#FAFAFA] shadow-xs'
+                          : 'border-[#E9E9ED] bg-white hover:border-[#D4D4DB] hover:bg-[#FAFAFA]/50'
                       }`}
                     >
                       <img
                         src={proj.image}
                         alt={proj.title}
-                        className="w-14 h-14 object-cover rounded-xl shrink-0 border border-[#E2ECE9]"
+                        className="w-14 h-14 object-cover rounded-xl shrink-0 border border-[#E9E9ED]"
                       />
                       <div className="flex-1 min-w-0">
-                        <div className="text-[10px] font-bold text-[#9A8C98] uppercase tracking-wider mb-0.5">
+                        <div className="text-[10px] font-bold text-[#8B8B95] uppercase tracking-wider mb-0.5">
                           {proj.category}
                         </div>
                         <h3 className="text-xs font-bold text-[#4A4E69] truncate font-serif italic">
                           {proj.title}
                         </h3>
-                        <p className="text-[11px] text-[#9A8C98] truncate font-light">
+                        <p className="text-[11px] text-[#8B8B95] truncate font-light">
                           {proj.role}
                         </p>
                       </div>
                       {isSelected && (
-                        <div className="w-6 h-6 rounded-full bg-[#9A8C98] text-white flex items-center justify-center shrink-0">
+                        <div className="w-6 h-6 rounded-full bg-[#8B8B95] text-white flex items-center justify-center shrink-0">
                           <CheckCircle2 className="w-4 h-4" />
                         </div>
                       )}
@@ -475,12 +475,12 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
             </div>
 
             {/* Right Column: Upload Controls & Image Preview */}
-            <div className="lg:col-span-7 bg-white p-6 sm:p-8 rounded-3xl border border-[#E2ECE9] shadow-sm space-y-6">
-              <div className="pb-3 border-b border-[#E2ECE9]">
+            <div className="lg:col-span-7 bg-white p-6 sm:p-8 rounded-3xl border border-[#E9E9ED] shadow-sm space-y-6">
+              <div className="pb-3 border-b border-[#E9E9ED]">
                 <h2 className="text-lg font-bold font-serif italic text-[#4A4E69]">
                   Upload & Perbarui Foto Karya
                 </h2>
-                <p className="text-xs text-[#9A8C98] font-light mt-0.5">
+                <p className="text-xs text-[#8B8B95] font-light mt-0.5">
                   Proyek Terpilih: <strong className="text-[#4A4E69]">{projects.find(p => p.id === selectedProjectId)?.title}</strong>
                 </p>
               </div>
@@ -490,20 +490,20 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
                 <label className="block text-xs font-bold text-[#4A4E69] uppercase tracking-wider mb-2">
                   Metode 1: Upload File Gambar Dari Perangkat Anda (HP / Laptop)
                 </label>
-                <div className="border-2 border-dashed border-[#C9E4DE] hover:border-[#9A8C98] bg-[#FCF8F4] rounded-3xl p-6 text-center transition-all relative cursor-pointer group">
+                <div className="border-2 border-dashed border-[#D4D4DB] hover:border-[#8B8B95] bg-[#FAFAFA] rounded-3xl p-6 text-center transition-all relative cursor-pointer group">
                   <input
                     type="file"
                     accept="image/*"
                     onChange={(e) => handleFileUpload(e, 'project')}
                     className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
                   />
-                  <div className="w-12 h-12 rounded-2xl bg-[#E2ECE9] text-[#4A4E69] flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
-                    <Upload className="w-6 h-6 text-[#9A8C98]" />
+                  <div className="w-12 h-12 rounded-2xl bg-[#E9E9ED] text-[#4A4E69] flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                    <Upload className="w-6 h-6 text-[#8B8B95]" />
                   </div>
                   <p className="text-xs font-bold text-[#4A4E69]">
                     Klik atau Seret (Drag) File Gambar Ke Sini
                   </p>
-                  <p className="text-[11px] text-[#9A8C98] mt-1 font-light">
+                  <p className="text-[11px] text-[#8B8B95] mt-1 font-light">
                     Mendukung format JPG, PNG, WebP (Maksimal 5MB)
                   </p>
                 </div>
@@ -515,7 +515,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
                   Metode 2: Tempelkan (Paste) URL Gambar Langsung
                 </label>
                 <div className="relative">
-                  <Link className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-[#9A8C98]" />
+                  <Link className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-[#8B8B95]" />
                   <input
                     type="text"
                     value={newProjectImage}
@@ -524,7 +524,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
                       setImagePreview(e.target.value);
                     }}
                     placeholder="https://images.unsplash.com/photo-... atau URL foto publik"
-                    className="w-full pl-10 pr-4 py-3 rounded-2xl bg-[#FCF8F4] border border-[#E2ECE9] focus:border-[#9A8C98] text-xs outline-none font-mono"
+                    className="w-full pl-10 pr-4 py-3 rounded-2xl bg-[#FAFAFA] border border-[#E9E9ED] focus:border-[#8B8B95] text-xs outline-none font-mono"
                   />
                 </div>
               </div>
@@ -534,7 +534,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
                 <label className="block text-xs font-bold text-[#4A4E69] uppercase tracking-wider mb-2">
                   Pratinjau (Preview) Tampilan Card Karya
                 </label>
-                <div className="relative rounded-2xl overflow-hidden border border-[#E2ECE9] bg-[#FCF8F4] h-56 sm:h-64 shadow-xs">
+                <div className="relative rounded-2xl overflow-hidden border border-[#E9E9ED] bg-[#FAFAFA] h-56 sm:h-64 shadow-xs">
                   {imagePreview ? (
                     <img
                       src={imagePreview}
@@ -543,7 +543,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
                       onError={() => showToast('URL gambar tidak valid atau gagal dimuat', 'error')}
                     />
                   ) : (
-                    <div className="w-full h-full flex flex-col items-center justify-center text-[#9A8C98] text-xs">
+                    <div className="w-full h-full flex flex-col items-center justify-center text-[#8B8B95] text-xs">
                       <ImageIcon className="w-8 h-8 mb-2 opacity-50" />
                       <span>Belum ada pratinjau gambar</span>
                     </div>
@@ -557,7 +557,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
               {/* Save Button */}
               <button
                 onClick={handleSaveProjectImage}
-                className="w-full py-3.5 px-6 rounded-2xl bg-[#9A8C98] hover:bg-[#4A4E69] text-white text-xs font-bold uppercase tracking-widest flex items-center justify-center gap-2 transition-all cursor-pointer shadow-xs"
+                className="w-full py-3.5 px-6 rounded-2xl bg-[#8B8B95] hover:bg-[#4A4E69] text-white text-xs font-bold uppercase tracking-widest flex items-center justify-center gap-2 transition-all cursor-pointer shadow-xs"
               >
                 <Save className="w-4 h-4" />
                 <span>Simpan Foto Proyek Ini</span>
@@ -570,11 +570,11 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
         {activeTab === 'manage_projects' && (
           <div className="space-y-6">
             {!isAddingNewProject ? (
-              <div className="bg-white p-6 rounded-3xl border border-[#E2ECE9] shadow-sm">
-                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-6 border-b border-[#E2ECE9] mb-6">
+              <div className="bg-white p-6 rounded-3xl border border-[#E9E9ED] shadow-sm">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-6 border-b border-[#E9E9ED] mb-6">
                   <div>
                     <h2 className="text-lg font-bold font-serif italic text-[#4A4E69]">Daftar Proyek Terdaftar</h2>
-                    <p className="text-xs text-[#9A8C98] font-light mt-0.5">
+                    <p className="text-xs text-[#8B8B95] font-light mt-0.5">
                       Anda dapat mengubah urutan, menambah proyek baru, atau mengedit detail lengkap karya.
                     </p>
                   </div>
@@ -597,7 +597,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
                       });
                       setIsAddingNewProject(true);
                     }}
-                    className="px-5 py-2.5 rounded-2xl bg-[#9A8C98] hover:bg-[#4A4E69] text-white text-xs font-bold uppercase tracking-wider flex items-center gap-2 cursor-pointer shadow-xs"
+                    className="px-5 py-2.5 rounded-2xl bg-[#8B8B95] hover:bg-[#4A4E69] text-white text-xs font-bold uppercase tracking-wider flex items-center gap-2 cursor-pointer shadow-xs"
                   >
                     <Plus className="w-4 h-4" />
                     <span>Tambah Proyek Baru</span>
@@ -608,34 +608,34 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
                   {projects.map((proj) => (
                     <div
                       key={proj.id}
-                      className="p-5 rounded-2xl border border-[#E2ECE9] bg-[#FCF8F4] flex flex-col justify-between"
+                      className="p-5 rounded-2xl border border-[#E9E9ED] bg-[#FAFAFA] flex flex-col justify-between"
                     >
                       <div className="flex items-start gap-3 mb-4">
                         <img
                           src={proj.image}
                           alt={proj.title}
-                          className="w-20 h-20 object-cover rounded-xl shrink-0 border border-[#E2ECE9]"
+                          className="w-20 h-20 object-cover rounded-xl shrink-0 border border-[#E9E9ED]"
                         />
                         <div className="flex-1 min-w-0">
-                          <span className="px-2.5 py-0.5 rounded-full bg-[#E2ECE9] text-[#4A4E69] text-[10px] font-bold uppercase">
+                          <span className="px-2.5 py-0.5 rounded-full bg-[#E9E9ED] text-[#4A4E69] text-[10px] font-bold uppercase">
                             {proj.category}
                           </span>
                           <h3 className="text-base font-bold font-serif italic text-[#4A4E69] mt-1 truncate">
                             {proj.title}
                           </h3>
-                          <p className="text-xs text-[#9A8C98] font-light line-clamp-2 mt-1">
+                          <p className="text-xs text-[#8B8B95] font-light line-clamp-2 mt-1">
                             {proj.summary}
                           </p>
                         </div>
                       </div>
 
-                      <div className="pt-3 border-t border-[#E2ECE9] flex items-center justify-between">
+                      <div className="pt-3 border-t border-[#E9E9ED] flex items-center justify-between">
                         <button
                           onClick={() => {
                             setEditingProject(proj);
                             setIsAddingNewProject(true);
                           }}
-                          className="text-xs font-bold text-[#4A4E69] hover:text-[#9A8C98] uppercase tracking-wider"
+                          className="text-xs font-bold text-[#4A4E69] hover:text-[#8B8B95] uppercase tracking-wider"
                         >
                           Edit Detail
                         </button>
@@ -653,14 +653,14 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
               </div>
             ) : (
               /* Add/Edit Project Form */
-              <div className="bg-white p-6 sm:p-8 rounded-3xl border border-[#E2ECE9] shadow-sm max-w-3xl mx-auto">
-                <div className="flex items-center justify-between pb-4 border-b border-[#E2ECE9] mb-6">
+              <div className="bg-white p-6 sm:p-8 rounded-3xl border border-[#E9E9ED] shadow-sm max-w-3xl mx-auto">
+                <div className="flex items-center justify-between pb-4 border-b border-[#E9E9ED] mb-6">
                   <h2 className="text-lg font-bold font-serif italic text-[#4A4E69]">
                     {editingProject.id && projects.some(p => p.id === editingProject.id) ? 'Edit Detail Proyek' : 'Form Tambah Proyek Baru'}
                   </h2>
                   <button
                     onClick={() => setIsAddingNewProject(false)}
-                    className="px-3 py-1.5 rounded-xl bg-[#FCF8F4] text-[#4A4E69] text-xs font-bold uppercase tracking-wider hover:bg-[#E2ECE9]"
+                    className="px-3 py-1.5 rounded-xl bg-[#FAFAFA] text-[#4A4E69] text-xs font-bold uppercase tracking-wider hover:bg-[#E9E9ED]"
                   >
                     Batal
                   </button>
@@ -678,7 +678,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
                         value={editingProject.title || ''}
                         onChange={(e) => setEditingProject({ ...editingProject, title: e.target.value })}
                         placeholder="Misal: EduMetric"
-                        className="w-full px-4 py-2.5 rounded-xl bg-[#FCF8F4] border border-[#E2ECE9] text-xs"
+                        className="w-full px-4 py-2.5 rounded-xl bg-[#FAFAFA] border border-[#E9E9ED] text-xs"
                       />
                     </div>
                     <div>
@@ -688,7 +688,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
                       <select
                         value={editingProject.category || 'Full Stack'}
                         onChange={(e) => setEditingProject({ ...editingProject, category: e.target.value as any })}
-                        className="w-full px-4 py-2.5 rounded-xl bg-[#FCF8F4] border border-[#E2ECE9] text-xs"
+                        className="w-full px-4 py-2.5 rounded-xl bg-[#FAFAFA] border border-[#E9E9ED] text-xs"
                       >
                         <option value="Full Stack">Full Stack</option>
                         <option value="AI & ML">AI & ML</option>
@@ -708,7 +708,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
                         value={editingProject.role || ''}
                         onChange={(e) => setEditingProject({ ...editingProject, role: e.target.value })}
                         placeholder="Misal: Project Lead & Full Stack Developer"
-                        className="w-full px-4 py-2.5 rounded-xl bg-[#FCF8F4] border border-[#E2ECE9] text-xs"
+                        className="w-full px-4 py-2.5 rounded-xl bg-[#FAFAFA] border border-[#E9E9ED] text-xs"
                       />
                     </div>
                     <div>
@@ -720,7 +720,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
                         value={editingProject.period || ''}
                         onChange={(e) => setEditingProject({ ...editingProject, period: e.target.value })}
                         placeholder="Misal: 04/2026 - 07/2026"
-                        className="w-full px-4 py-2.5 rounded-xl bg-[#FCF8F4] border border-[#E2ECE9] text-xs"
+                        className="w-full px-4 py-2.5 rounded-xl bg-[#FAFAFA] border border-[#E9E9ED] text-xs"
                       />
                     </div>
                   </div>
@@ -735,7 +735,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
                       value={editingProject.summary || ''}
                       onChange={(e) => setEditingProject({ ...editingProject, summary: e.target.value })}
                       placeholder="Ringkasan 1-2 kalimat untuk kartu depan"
-                      className="w-full px-4 py-2.5 rounded-xl bg-[#FCF8F4] border border-[#E2ECE9] text-xs"
+                      className="w-full px-4 py-2.5 rounded-xl bg-[#FAFAFA] border border-[#E9E9ED] text-xs"
                     />
                   </div>
 
@@ -748,7 +748,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
                         type="file"
                         accept="image/*"
                         onChange={(e) => handleFileUpload(e, 'new_project')}
-                        className="text-xs file:mr-3 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-bold file:bg-[#E2ECE9] file:text-[#4A4E69] cursor-pointer"
+                        className="text-xs file:mr-3 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-bold file:bg-[#E9E9ED] file:text-[#4A4E69] cursor-pointer"
                       />
                     </div>
                     <input
@@ -756,21 +756,21 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
                       value={editingProject.image || ''}
                       onChange={(e) => setEditingProject({ ...editingProject, image: e.target.value })}
                       placeholder="Atau tempelkan URL Gambar"
-                      className="w-full px-4 py-2.5 rounded-xl bg-[#FCF8F4] border border-[#E2ECE9] text-xs font-mono"
+                      className="w-full px-4 py-2.5 rounded-xl bg-[#FAFAFA] border border-[#E9E9ED] text-xs font-mono"
                     />
                   </div>
 
-                  <div className="pt-4 border-t border-[#E2ECE9] flex justify-end gap-3">
+                  <div className="pt-4 border-t border-[#E9E9ED] flex justify-end gap-3">
                     <button
                       type="button"
                       onClick={() => setIsAddingNewProject(false)}
-                      className="px-5 py-2.5 rounded-2xl bg-[#FCF8F4] text-[#4A4E69] text-xs font-bold uppercase tracking-wider"
+                      className="px-5 py-2.5 rounded-2xl bg-[#FAFAFA] text-[#4A4E69] text-xs font-bold uppercase tracking-wider"
                     >
                       Batal
                     </button>
                     <button
                       type="submit"
-                      className="px-6 py-2.5 rounded-2xl bg-[#9A8C98] hover:bg-[#4A4E69] text-white text-xs font-bold uppercase tracking-wider shadow-xs"
+                      className="px-6 py-2.5 rounded-2xl bg-[#8B8B95] hover:bg-[#4A4E69] text-white text-xs font-bold uppercase tracking-wider shadow-xs"
                     >
                       Simpan Proyek
                     </button>
@@ -783,10 +783,10 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
 
         {/* TAB 3: UPLOAD FOTO GALERI ARTEFAK */}
         {activeTab === 'gallery' && (
-          <div className="bg-white p-6 sm:p-8 rounded-3xl border border-[#E2ECE9] shadow-sm max-w-4xl mx-auto space-y-6">
-            <div className="pb-4 border-b border-[#E2ECE9]">
+          <div className="bg-white p-6 sm:p-8 rounded-3xl border border-[#E9E9ED] shadow-sm max-w-4xl mx-auto space-y-6">
+            <div className="pb-4 border-b border-[#E9E9ED]">
               <h2 className="text-lg font-bold font-serif italic text-[#4A4E69]">Kelola Foto Artefak Galeri</h2>
-              <p className="text-xs text-[#9A8C98] font-light mt-0.5">
+              <p className="text-xs text-[#8B8B95] font-light mt-0.5">
                 Ganti atau upload foto dokumentasi visual antarmuka & sertifikat.
               </p>
             </div>
@@ -803,7 +803,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
                     const found = galleryItems.find(g => g.id === e.target.value);
                     if (found) setGalleryImageInput(found.image);
                   }}
-                  className="w-full px-4 py-3 rounded-2xl bg-[#FCF8F4] border border-[#E2ECE9] text-xs font-serif italic"
+                  className="w-full px-4 py-3 rounded-2xl bg-[#FAFAFA] border border-[#E9E9ED] text-xs font-serif italic"
                 >
                   {galleryItems.map(g => (
                     <option key={g.id} value={g.id}>{g.title} ({g.category})</option>
@@ -818,20 +818,20 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
                     type="file"
                     accept="image/*"
                     onChange={(e) => handleFileUpload(e, 'gallery')}
-                    className="w-full text-xs file:mr-3 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-bold file:bg-[#E2ECE9] file:text-[#4A4E69] cursor-pointer mb-2"
+                    className="w-full text-xs file:mr-3 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-bold file:bg-[#E9E9ED] file:text-[#4A4E69] cursor-pointer mb-2"
                   />
                   <input
                     type="text"
                     value={galleryImageInput}
                     onChange={(e) => setGalleryImageInput(e.target.value)}
                     placeholder="Atau tempelkan URL Foto"
-                    className="w-full px-4 py-2.5 rounded-xl bg-[#FCF8F4] border border-[#E2ECE9] text-xs font-mono"
+                    className="w-full px-4 py-2.5 rounded-xl bg-[#FAFAFA] border border-[#E9E9ED] text-xs font-mono"
                   />
                 </div>
 
                 <button
                   onClick={handleSaveGalleryImage}
-                  className="w-full mt-4 py-3 rounded-2xl bg-[#9A8C98] hover:bg-[#4A4E69] text-white text-xs font-bold uppercase tracking-wider cursor-pointer shadow-xs"
+                  className="w-full mt-4 py-3 rounded-2xl bg-[#8B8B95] hover:bg-[#4A4E69] text-white text-xs font-bold uppercase tracking-wider cursor-pointer shadow-xs"
                 >
                   Simpan Foto Artefak Galeri
                 </button>
@@ -841,11 +841,11 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
                 <label className="block text-xs font-bold text-[#4A4E69] uppercase tracking-wider mb-2">
                   Pratinjau Foto Artefak
                 </label>
-                <div className="rounded-2xl overflow-hidden border border-[#E2ECE9] bg-[#FCF8F4] h-52 relative">
+                <div className="rounded-2xl overflow-hidden border border-[#E9E9ED] bg-[#FAFAFA] h-52 relative">
                   {galleryImageInput ? (
                     <img src={galleryImageInput} alt="Gallery Preview" className="w-full h-full object-cover" />
                   ) : (
-                    <div className="w-full h-full flex items-center justify-center text-[#9A8C98] text-xs">
+                    <div className="w-full h-full flex items-center justify-center text-[#8B8B95] text-xs">
                       Pilih foto untuk pratinjau
                     </div>
                   )}

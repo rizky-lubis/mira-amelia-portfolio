@@ -10,10 +10,7 @@ interface HeroSectionProps {
 export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCVModal }) => {
   return (
     <section id="hero" className="relative min-h-screen pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden flex items-center">
-      {/* Background soft ambient pastel glowing blobs */}
-      <div className="absolute top-12 left-1/4 w-96 h-96 bg-[#FDE2E4]/50 rounded-full blur-3xl pointer-events-none -z-10 animate-pulse" />
-      <div className="absolute top-1/3 right-10 w-80 h-80 bg-[#DBCDF0]/40 rounded-full blur-3xl pointer-events-none -z-10" />
-      <div className="absolute bottom-10 left-10 w-72 h-72 bg-[#E2ECE9]/60 rounded-full blur-3xl pointer-events-none -z-10" />
+      {/* Background handled globally by BackgroundFX */}
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
@@ -26,46 +23,46 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCVModal }) => {
             className="lg:col-span-7 flex flex-col items-start"
           >
             {/* Status Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#E2ECE9] border border-[#C9E4DE] text-[#4A4E69] text-xs font-medium mb-6 shadow-xs">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#E9E9ED] border border-[#D4D4DB] text-[#4A4E69] text-xs font-medium mb-6 shadow-xs">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#9A8C98] opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#9A8C98]"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#8B8B95] opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#8B8B95]"></span>
               </span>
               <span className="tracking-wide">Open for Software Engineer Opportunities</span>
-              <Sparkles className="w-3.5 h-3.5 text-[#9A8C98] ml-0.5" />
+              <Sparkles className="w-3.5 h-3.5 text-[#8B8B95] ml-0.5" />
             </div>
 
             {/* Main Greeting Heading */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#4A4E69] tracking-tight leading-tight mb-4">
-              Halo, Saya <span className="font-serif italic font-normal text-[#9A8C98] border-b-2 border-[#FDE2E4]">Mira Amelia</span>
+              Halo, Saya <span className="font-serif italic font-normal text-[#8B8B95] border-b-2 border-[#EFEFF2]">Mira Amelia</span>
             </h1>
 
             {/* Sub-Title */}
             <p className="text-lg sm:text-xl font-medium text-[#4A4E69] mb-4 flex items-center gap-2 flex-wrap">
               <span>{PROFILE_DATA.role}</span>
-              <span className="text-[#C9E4DE]">•</span>
-              <span className="text-[#9A8C98] font-semibold">{PROFILE_DATA.subRole}</span>
+              <span className="text-[#D4D4DB]">•</span>
+              <span className="text-[#8B8B95] font-semibold">{PROFILE_DATA.subRole}</span>
             </p>
 
             {/* Description */}
             <p className="text-[#4A4E69]/80 text-sm sm:text-base leading-relaxed mb-8 max-w-2xl font-light">
-              Lulusan Informatika <strong className="text-[#4A4E69] font-semibold">Universitas Nusa Mandiri (IPK {PROFILE_DATA.gpa})</strong> dengan spesialisasi <span className="bg-[#E2ECE9] text-[#4A4E69] px-2 py-0.5 rounded-md font-medium border-l-2 border-[#C9E4DE]">Full Stack Web Development</span>, <span className="bg-[#FDE2E4] text-[#4A4E69] px-2 py-0.5 rounded-md font-medium border-l-2 border-[#F2C6DE]">Software Testing (QA)</span>, dan <span className="bg-[#DBCDF0]/60 text-[#4A4E69] px-2 py-0.5 rounded-md font-medium border-l-2 border-[#9A8C98]">Artificial Intelligence (AI & ML)</span>. Pengembang aplikasi bersertifikat resmi HKI, Cisco & Huawei.
+              Lulusan Informatika <strong className="text-[#4A4E69] font-semibold">Universitas Nusa Mandiri (IPK {PROFILE_DATA.gpa})</strong> dengan spesialisasi <span className="bg-[#E9E9ED] text-[#4A4E69] px-2 py-0.5 rounded-md font-medium border-l-2 border-[#D4D4DB]">Full Stack Web Development</span>, <span className="bg-[#EFEFF2] text-[#4A4E69] px-2 py-0.5 rounded-md font-medium border-l-2 border-[#E3E3E8]">Software Testing (QA)</span>, dan <span className="bg-[#EFEFF2]/60 text-[#4A4E69] px-2 py-0.5 rounded-md font-medium border-l-2 border-[#8B8B95]">Artificial Intelligence (AI & ML)</span>. Pengembang aplikasi bersertifikat resmi HKI, Cisco & Huawei.
             </p>
 
             {/* Call to Actions */}
             <div className="flex flex-wrap items-center gap-3 mb-10">
               <a
                 href="#projects"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-[#9A8C98] hover:bg-[#4A4E69] text-white font-medium text-sm shadow-sm transition-all transform hover:-translate-y-0.5 uppercase tracking-wider text-xs"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-[#8B8B95] hover:bg-[#4A4E69] text-white font-medium text-sm shadow-sm transition-all transform hover:-translate-y-0.5 uppercase tracking-wider text-xs"
               >
                 <span>Jelajahi Karya ✧</span>
               </a>
 
               <button
                 onClick={onOpenCVModal}
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-white hover:bg-[#FCF8F4] text-[#4A4E69] font-medium text-xs uppercase tracking-wider border border-[#E2ECE9] shadow-xs hover:border-[#C9E4DE] transition-all cursor-pointer"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-white hover:bg-[#FAFAFA] text-[#4A4E69] font-medium text-xs uppercase tracking-wider border border-[#E9E9ED] shadow-xs hover:border-[#D4D4DB] transition-all cursor-pointer"
               >
-                <Download className="w-4 h-4 text-[#9A8C98]" />
+                <Download className="w-4 h-4 text-[#8B8B95]" />
                 <span>Download CV (PDF)</span>
               </button>
 
@@ -73,7 +70,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCVModal }) => {
                 href={PROFILE_DATA.whatsappUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-[#E2ECE9] hover:bg-[#C9E4DE] text-[#4A4E69] font-medium text-xs uppercase tracking-wider border border-[#C9E4DE] transition-all"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-[#E9E9ED] hover:bg-[#D4D4DB] text-[#4A4E69] font-medium text-xs uppercase tracking-wider border border-[#D4D4DB] transition-all"
               >
                 <MessageSquare className="w-4 h-4 text-[#4A4E69]" />
                 <span>Chat WhatsApp</span>
@@ -81,13 +78,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCVModal }) => {
             </div>
 
             {/* Quick Links & Info */}
-            <div className="flex items-center gap-6 pt-6 border-t border-[#E2ECE9] w-full">
+            <div className="flex items-center gap-6 pt-6 border-t border-[#E9E9ED] w-full">
               <div className="flex items-center gap-3">
                 <a
                   href={PROFILE_DATA.github}
                   target="_blank"
                   rel="noreferrer"
-                  className="w-9 h-9 rounded-full bg-white border border-[#E2ECE9] flex items-center justify-center text-[#4A4E69] hover:text-[#9A8C98] hover:border-[#C9E4DE] hover:bg-[#FCF8F4] transition-all"
+                  className="w-9 h-9 rounded-full bg-white border border-[#E9E9ED] flex items-center justify-center text-[#4A4E69] hover:text-[#8B8B95] hover:border-[#D4D4DB] hover:bg-[#FAFAFA] transition-all"
                   title="GitHub Profile"
                 >
                   <Github className="w-4 h-4" />
@@ -96,24 +93,24 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCVModal }) => {
                   href={PROFILE_DATA.linkedIn}
                   target="_blank"
                   rel="noreferrer"
-                  className="w-9 h-9 rounded-full bg-white border border-[#E2ECE9] flex items-center justify-center text-[#4A4E69] hover:text-[#9A8C98] hover:border-[#C9E4DE] hover:bg-[#FCF8F4] transition-all"
+                  className="w-9 h-9 rounded-full bg-white border border-[#E9E9ED] flex items-center justify-center text-[#4A4E69] hover:text-[#8B8B95] hover:border-[#D4D4DB] hover:bg-[#FAFAFA] transition-all"
                   title="LinkedIn Profile"
                 >
                   <Linkedin className="w-4 h-4" />
                 </a>
                 <a
                   href={`mailto:${PROFILE_DATA.email}`}
-                  className="w-9 h-9 rounded-full bg-white border border-[#E2ECE9] flex items-center justify-center text-[#4A4E69] hover:text-[#9A8C98] hover:border-[#C9E4DE] hover:bg-[#FCF8F4] transition-all"
+                  className="w-9 h-9 rounded-full bg-white border border-[#E9E9ED] flex items-center justify-center text-[#4A4E69] hover:text-[#8B8B95] hover:border-[#D4D4DB] hover:bg-[#FAFAFA] transition-all"
                   title="Send Email"
                 >
                   <Mail className="w-4 h-4" />
                 </a>
               </div>
 
-              <div className="h-4 w-px bg-[#E2ECE9]" />
+              <div className="h-4 w-px bg-[#E9E9ED]" />
 
-              <div className="flex items-center gap-1.5 text-xs text-[#9A8C98] font-medium">
-                <span className="w-2 h-2 rounded-full bg-[#C9E4DE]"></span>
+              <div className="flex items-center gap-1.5 text-xs text-[#8B8B95] font-medium">
+                <span className="w-2 h-2 rounded-full bg-[#D4D4DB]"></span>
                 <span>{PROFILE_DATA.location}</span>
               </div>
             </div>
@@ -129,13 +126,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCVModal }) => {
             <div className="relative w-full max-w-sm sm:max-w-md">
               
               {/* Outer Decorative Pastel Frame */}
-              <div className="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-[#FDE2E4] via-[#C9E4DE] to-[#DBCDF0] blur-md opacity-80" />
+              <div className="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-[#EFEFF2] via-[#D4D4DB] to-[#EFEFF2] blur-md opacity-80" />
 
               {/* Main Avatar Card */}
-              <div className="relative rounded-3xl bg-white p-4 border border-[#FDE2E4] shadow-sm">
+              <div className="relative rounded-3xl bg-white p-4 border border-[#EFEFF2] shadow-sm">
                 
                 {/* Photo Frame Container */}
-                <div className="relative rounded-2xl overflow-hidden aspect-[4/5] bg-[#FCF8F4] flex items-center justify-center border border-[#E2ECE9]">
+                <div className="relative rounded-2xl overflow-hidden aspect-[4/5] bg-[#FAFAFA] flex items-center justify-center border border-[#E9E9ED]">
                   
                   {/* High quality aesthetic portrait illustration / photo */}
                   <img
@@ -149,7 +146,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCVModal }) => {
 
                   {/* Text on Image bottom */}
                   <div className="absolute bottom-4 left-4 right-4 text-white">
-                    <p className="text-[10px] uppercase font-mono tracking-widest text-[#C9E4DE] font-semibold mb-0.5">
+                    <p className="text-[10px] uppercase font-mono tracking-widest text-[#D4D4DB] font-semibold mb-0.5">
                       Universitas Nusa Mandiri
                     </p>
                     <h3 className="text-lg font-serif italic">Mira Amelia Prayitno</h3>
@@ -162,14 +159,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCVModal }) => {
                   initial={{ y: 10, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ delay: 0.3 }}
-                  className="absolute -top-4 -right-2 sm:-right-4 p-3 rounded-2xl shadow-sm border border-[#E2ECE9] flex items-center gap-3 bg-white"
+                  className="absolute -top-4 -right-2 sm:-right-4 p-3 rounded-2xl shadow-sm border border-[#E9E9ED] flex items-center gap-3 bg-white"
                 >
-                  <div className="w-10 h-10 rounded-xl bg-[#FDE2E4] flex items-center justify-center text-[#4A4E69] font-bold text-sm">
+                  <div className="w-10 h-10 rounded-xl bg-[#EFEFF2] flex items-center justify-center text-[#4A4E69] font-bold text-sm">
                     <GraduationCap className="w-5 h-5" />
                   </div>
                   <div>
-                    <div className="text-[10px] font-bold text-[#9A8C98] uppercase tracking-wider">IPK Kumulatif</div>
-                    <div className="text-base font-bold text-[#4A4E69]">3.89 <span className="text-xs text-[#9A8C98] font-medium">/ 4.00</span></div>
+                    <div className="text-[10px] font-bold text-[#8B8B95] uppercase tracking-wider">IPK Kumulatif</div>
+                    <div className="text-base font-bold text-[#4A4E69]">3.89 <span className="text-xs text-[#8B8B95] font-medium">/ 4.00</span></div>
                   </div>
                 </motion.div>
 
@@ -178,13 +175,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCVModal }) => {
                   initial={{ y: -10, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ delay: 0.4 }}
-                  className="absolute -bottom-4 -left-2 sm:-left-4 p-3 rounded-2xl shadow-sm border border-[#E2ECE9] flex items-center gap-3 bg-white"
+                  className="absolute -bottom-4 -left-2 sm:-left-4 p-3 rounded-2xl shadow-sm border border-[#E9E9ED] flex items-center gap-3 bg-white"
                 >
-                  <div className="w-10 h-10 rounded-xl bg-[#C9E4DE] flex items-center justify-center text-[#4A4E69]">
+                  <div className="w-10 h-10 rounded-xl bg-[#D4D4DB] flex items-center justify-center text-[#4A4E69]">
                     <Award className="w-5 h-5" />
                   </div>
                   <div>
-                    <div className="text-[10px] font-bold text-[#9A8C98] uppercase tracking-wider">Hak Cipta (HKI) Resmi</div>
+                    <div className="text-[10px] font-bold text-[#8B8B95] uppercase tracking-wider">Hak Cipta (HKI) Resmi</div>
                     <div className="text-xs font-bold text-[#4A4E69]">DJKI Kemenkumham RI</div>
                   </div>
                 </motion.div>
@@ -194,9 +191,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCVModal }) => {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.5 }}
-                  className="absolute top-1/2 -left-6 hidden sm:flex px-3 py-2 rounded-xl shadow-xs border border-[#E2ECE9] items-center gap-2 bg-white"
+                  className="absolute top-1/2 -left-6 hidden sm:flex px-3 py-2 rounded-xl shadow-xs border border-[#E9E9ED] items-center gap-2 bg-white"
                 >
-                  <Shield className="w-4 h-4 text-[#9A8C98]" />
+                  <Shield className="w-4 h-4 text-[#8B8B95]" />
                   <span className="text-xs font-semibold text-[#4A4E69]">MTCNA Certified</span>
                 </motion.div>
 
